@@ -1,0 +1,68 @@
+.glide__arrow,.glide__arrow1,.glide__arrow2 {
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 2;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1; }
+  .glide__arrow:focus,.glide__arrow1:focus , .glide__arrow2:focus {
+    outline: none; }
+  .glide__arrow:hover,.glide__arrow1:hover,.glide__arrow2:hover   {
+    border-color: white; }
+  .glide__arrow--left,.glide__arrow--left1,.glide__arrow--left2 {
+    left: 2em; }
+  .glide__arrow--right,.glide__arrow--right1,.glide__arrow--right2 {
+    right: 2em; }
+  .glide__arrow--disabled,.glide__arrow--disabled1,.glide__arrow--disabled2 {
+    opacity: 0.33; }
+
+.glide__bullets,.glide__bullets1,.glide__bullets2 {
+  position: absolute;
+  z-index: 2;
+  bottom: 2em;
+  left: 50%;
+  display: inline-flex;
+  list-style: none;
+  transform: translateX(-50%); }
+
+.glide__bullet,.glide__bullet1,.glide__bullet2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  margin: 0 0.25em; }
+  .glide__bullet:focus,.glide__bullet1:focus ,.glide__bullet2:focus  {
+    outline: none; }
+  .glide__bullet:hover, .glide__bullet:focus,.glide__bullet1:hover,
+  .glide__bullet1:focus,.glide__bullet2:hover, .glide__bullet2:focus {
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.5); }
+  .glide__bullet--active,.glide__bullet--active1,.glide__bullet--active2 {
+    background-color: white; }
+
+.glide--swipeable,.glide--swipeable1,.glide--swipeable2 {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+
+.glide--dragging,.glide--dragging1,.glide--dragging2 {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing; }

@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+    
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display:flex; 
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    min-height: 100vh;
+    background: #000;    
+}
+/*titulo*/
+.title{
+    display: flex;
+    z-index: 1;
+}
+.title h2{    
+    margin: auto;
+    position: relative;
+    font-size: 11vw;
+    color: #000;
+    -webkit-text-stroke:0.2vw #252839;
+    text-transform: uppercase;
+}
+.title h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #E14315;
+    -webkit-text-stroke: 0vw #329d52;
+    border-right: 2px solid #E14315;
+    overflow: hidden;
+    animation: title 5s linear infinite;
+}
+@keyframes title{
+    0%,10%,100%{
+        width: 0;    
+    }
+    70%,90%{
+        width: 100%;    
+    }
+    
+}
+
+
+.cont-gen{
+    display: flex;
+    width: 100%;
+
+    
+}
+/*card1*/
+.container{
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.container .card{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #630D63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.container .card::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255,255,255,0.2);
+}
+.container .card .content{
+    padding: 30px;
+    text-align: center;
+}
+.container .card .content h2{
+    position: absolute;
+    right: 30px;
+    font-size: 4em;
+    font-weight: 800;
+    color: #FA15FA;
+    z-index: 1;
+    opacity: 0.1;
+    transition:0.5s;  
+}
+.container .card:hover .content h2{
+    opacity: 1;
+    transform: translateY(-70px);
+}
+.container .card .content h3{
+    position: relative;
+    font-size: 3em;
+    color:#fff;
+    z-index: 2;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.container .card .content p{
+    position: relative;
+    font-size: 1em;
+    color:#fff;
+    z-index: 2;
+    opacity: 0.5;
+    font-weight: 300;
+    transition: 0.5s;
+}
+.container .card:hover .content h3,
+.container .card:hover .content p{ 
+    opacity:1;  
+}
+.container .card .content a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #fff;
+    color:#0c002b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.container .card span{
+    transition: 0.5;
+    opacity: 0;
+}
+.container .card:hover span{
+    opacity: 1;
+}
+.container .card span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:3px; 
+    background: linear-gradient(to right,transparent,#FA15FA);
+    animation: linea 2s linear infinite;
+}
+@keyframes linea{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.container .card span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height:100%; 
+    background: linear-gradient(to bottom,transparent,#FA15FA);
+    animation: linea1 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes linea1{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+.container .card span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height:3px; 
+    background: linear-gradient(to left,transparent,#FA15FA);
+    animation: linea2 2s linear infinite;
+}
+@keyframes linea2{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.container .card span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height:100%; 
+    background: linear-gradient(to top,transparent,#FA15FA);
+    animation: linea3 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes linea3{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+/*card2*/
+.container1{
+    width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container1 .card1{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #14437F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.container1 .card1::before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255,255,255,0.1);
+}
+.container1 .card1 .content1{
+    padding: 30px;
+    text-align: center;
+}
+.container1 .card1 .content1 h2{
+    position: absolute;
+    right: 30px;
+    font-size: 4em;
+    font-weight: 800;
+    color:#1779ff;
+    z-index: 1;
+    opacity: 0.1;
+    transition:0.5s;  
+}
+.container1 .card1:hover .content1 h2{
+    opacity: 1;
+    transform: translateY(-70px);
+}
+.container1 .card1 .content1 h3{
+    position: relative;
+    font-size: 3em;
+    color:#fff;
+    z-index: 2;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.container1 .card1 .content1 p{
+    position: relative;
+    font-size: 1em;
+    color:#fff;
+    z-index: 2;
+    opacity: 0.5;
+    font-weight: 300;
+    transition: 0.5s;
+}
+.container1 .card1:hover .content1 h3,
+.container1 .card1:hover .content1 p{ 
+    opacity:1;  
+}
+.container1 .card1 .content1 a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #fff;
+    color:#0c002b;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.container1 .card1 span{
+    transition: 0.5;
+    opacity: 0;
+}
+.container1 .card1:hover span{
+    opacity: 1;
+}
+.container1 .card1 span:nth-child(1){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:3px; 
+    background: linear-gradient(to right,transparent,#1779ff);
+    animation: linea 2s linear infinite;
+}
+@keyframes linea{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.container1 .card1 span:nth-child(2){
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height:100%; 
+    background: linear-gradient(to bottom,transparent,#1779ff);
+    animation: linea1 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes linea1{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+.container1 .card1 span:nth-child(3){
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height:3px; 
+    background: linear-gradient(to left,transparent,#1779ff);
+    animation: linea2 2s linear infinite;
+}
+@keyframes linea2{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.container1 .card1 span:nth-child(4){
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height:100%; 
+    background: linear-gradient(to top,transparent,#1779ff);
+    animation: linea3 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes linea3{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+/*fondo animado*/
+section{
+    display: flex;
+    overflow: hidden;    
+}
+span{
+    position: absolute;
+    pointer-events: none;    
+    background: #fff;
+    overflow: hidden;
+    animation: animate 4s linear infinite; 
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: scale(0) translateY(0) rotate(0deg);
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1) translateY(-500%)  rotate(360deg);
+    }
+}
+@media screen and (max-width: 925px){
+    .cont-gen{
+        flex-wrap: wrap;
+    }
+    .container .card{
+        width: 60vw;
+        height: 200px;
+    }
+    .container1 .card1{
+        width: 60vw;
+        height: 200px;
+    }
+    .container .card .content h2{
+        display: none;
+    }
+    .container1 .card1 .content1 h2{
+        display: none;
+    }
+    section{
+        display: none;
+    }
+    .container .card span{
+    transition: 0.5;
+    opacity: 1;
+    }
+    .container1 .card1 span{
+    transition: 0.5;
+    opacity: 1;
+    }
+}
